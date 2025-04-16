@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taxi Express</title>
+  <title>G7 Transport - Réservation Taxi</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
+      background-color: #f2f2f2;
       margin: 0;
       padding: 0;
       text-align: center;
@@ -59,19 +59,107 @@
     .btn:hover {
       opacity: 0.9;
     }
+
+    .form-section {
+      background-color: white;
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .form-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .send-btn {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #000;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .send-btn:hover {
+      background-color: #333;
+    }
+
+    .map-container {
+      margin: 40px auto;
+      max-width: 800px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Taxi Express</h1>
+    <h1>G7 Transport</h1>
     <p>Votre chauffeur disponible 24h/24, 7j/7</p>
 
     <div class="btn-container">
-      <a href="tel:+22781913871" class="btn call-btn">📞 Appeler maintenant</a>
-      <a href="https://wa.me/22789083902?text=Bonjour%20je%20souhaite%20réserver%20un%20taxi" target="_blank" class="btn whatsapp-btn">💬 WhatsApp</a>
+      <a href="tel:+22789083902" class="btn call-btn">📞 Appeler maintenant</a>
+      <a href="https://wa.me/22789083902?text=Bonjour%2C%20je%20souhaite%20réserver%20un%20taxi" target="_blank" class="btn whatsapp-btn">💬 WhatsApp</a>
     </div>
   </header>
+
+  <section class="form-section">
+    <h2>Réserver un taxi</h2>
+    <form action="https://formsubmit.co/infovinyo@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      
+      <label for="nom">Nom :</label>
+      <input type="text" name="Nom" id="nom" required>
+
+      <label for="depart">Départ :</label>
+      <input type="text" name="Départ" id="depart" required>
+
+      <label for="destination">Destination :</label>
+      <input type="text" name="Destination" id="destination" required>
+
+      <label for="date">Date et heure :</label>
+      <input type="datetime-local" name="Date et heure" id="date" required>
+
+      <button type="submit" class="send-btn">Envoyer la demande</button>
+    </form>
+  </section>
+
+  <section class="map-container">
+    <h2>Ma position</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62379.57450523627!2d2.1023!3d13.5128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sne!4v1713264827000"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
 
 </body>
 </html>
