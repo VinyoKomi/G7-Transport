@@ -5,73 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taxi Express</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
+   .container {
+  height: 1000px;
+  background-color: #f2f2f2;
+  overflow: auto;
+  }
 
-    header {
-      background-color: #000;
-      color: #fff;
-      padding: 30px 20px;
-    }
-
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    .btn-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      font-size: 18px;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .call-btn {
-      background-color: #FFD700;
-      color: black;
-    }
-
-    .whatsapp-btn {
-      background-color: #25D366;
-      color: white;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-    }
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: orange;
+  padding: 10px;
+  }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Taxi Express</h1>
-    <p>Votre chauffeur disponible 24h/24, 7j/7</p>
-
-    <div class="btn-container">
-      <a href="tel:+22781913871" class="btn call-btn">📞 Appeler maintenant</a>
-      <a href="https://wa.me/22789083902?text=Bonjour%20je%20souhaite%20réserver%20un%20taxi" target="_blank" class="btn whatsapp-btn">💬 WhatsApp</a>
-    </div>
-  </header>
+  <div class="container">
+  <div class="sticky-header">Je suis sticky</div>
+  <p>Beaucoup de texte ici...</p>
+  </div>
 
 </body>
 </html>
